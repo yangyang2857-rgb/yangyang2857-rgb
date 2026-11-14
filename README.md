@@ -25,10 +25,10 @@ One person doing product, code, QA and release. I believe *one less abstraction 
 | --- | --- |
 | **Who I am** | Vocational student and a one-person dev team: product, coding, testing and release all run by me |
 | **Approach** | Native first. If the platform API can do it, no framework; if the system toolchain can do it, no build system |
-| **Currently building** | A Gradle-free Android build chain, a guardrail SDK for AI agent function calls, and a dependency-free personal site |
+| **Currently building** | A Gradle-free Android build chain, a guardrail SDK for AI agent function calls, an audit-only disk CLI that never deletes, and a dependency-free personal site |
 | **What I believe** | Fewer dependencies, fewer failure surfaces. A reproducible build beats a clever one |
 
-## Three things I'm building
+## What I'm building
 
 ### OneStar
 
@@ -55,7 +55,7 @@ One person doing product, code, QA and release. I believe *one less abstraction 
 [![Status](https://img.shields.io/badge/status-alpha-orange)](#)
 
 - **Per-function** access control over `AppFunctions`: authorization, rate limiting and auditing in one chain
-- Kotlin, `minSdk 36`, MIT licensed
+- Kotlin 2.2, `minSdk 26`, MIT licensed
 
 ### yangyang2857-rgb.github.io
 
@@ -68,6 +68,29 @@ One person doing product, code, QA and release. I believe *one less abstraction 
 - `dependencies: 0`, hosted on GitHub Pages
 - Single-page long scroll, dark/light themes, hand-written browser fallbacks
 
+### moltdisk
+
+> Most of the bulk in your projects is build output that can be rebuilt from source. This finds it, measures it, and shows the evidence for why it is disposable — then it stops. It deletes nothing.
+
+[![Repo](https://img.shields.io/badge/repo-moltdisk-1f6feb?logo=github&logoColor=white)](https://github.com/yangyang2857-rgb/moltdisk)
+[![ci](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/moltdisk/ci.yml?branch=main&label=ci&logo=githubactions&logoColor=white)](https://github.com/yangyang2857-rgb/moltdisk/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/yangyang2857-rgb/moltdisk?label=release&color=DEA584)](https://github.com/yangyang2857-rgb/moltdisk/releases)
+[![License](https://img.shields.io/github/license/yangyang2857-rgb/moltdisk?label=license&color=2ea44f)](https://github.com/yangyang2857-rgb/moltdisk/blob/main/LICENSE)
+
+- Walks `node_modules` / `target` / `dist` / `venv` / `Pods` and common caches, ranks them by size, explains each verdict
+- Rust 2021, MSRV 1.80; no delete module, no `remove_dir_all`, and `-y` is a hard error
+
+### Marvis · Persona Spec
+
+> A persona spec that a program can check: the style guide says who she is, this says which line she says next.
+
+[![Repo](https://img.shields.io/badge/repo-marvis--persona--spec-1f6feb?logo=github&logoColor=white)](https://github.com/yangyang2857-rgb/marvis-persona-spec)
+[![lint](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/marvis-persona-spec/persona-lint.yml?branch=main&label=lint&logo=githubactions&logoColor=white)](https://github.com/yangyang2857-rgb/marvis-persona-spec/actions/workflows/persona-lint.yml)
+[![License](https://img.shields.io/github/license/yangyang2857-rgb/marvis-persona-spec?label=license&color=2ea44f)](https://github.com/yangyang2857-rgb/marvis-persona-spec/blob/main/LICENSE)
+
+- 30 line slots, 20 banned phrases, a working lint script and 10 baseline tests, plus the Fault Bloom visual system
+- Two-stage CI: greyscale reporting first, blocking gate once the backlog reaches zero
+
 ## Toolbox
 
 <div align="center">
@@ -76,6 +99,7 @@ One person doing product, code, QA and release. I believe *one less abstraction 
 
 ![Kotlin](https://img.shields.io/badge/-Kotlin-7F52FF?logo=kotlin&logoColor=white)
 ![Java](https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white)
+![Rust](https://img.shields.io/badge/-Rust-000000?logo=rust&logoColor=white)
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
 ![Bash](https://img.shields.io/badge/-Shell-4EAA25?logo=gnubash&logoColor=white)
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)
@@ -106,8 +130,10 @@ One person doing product, code, QA and release. I believe *one less abstraction 
 | Repo | Language | Latest release | Last commit |
 | --- | --- | --- | --- |
 | [onestar](https://github.com/yangyang2857-rgb/onestar) | ![lang](https://img.shields.io/github/languages/top/yangyang2857-rgb/onestar) | ![release](https://img.shields.io/github/v/release/yangyang2857-rgb/onestar) | ![last](https://img.shields.io/github/last-commit/yangyang2857-rgb/onestar) |
-| [appfunction-guard](https://github.com/yangyang2857-rgb/appfunction-guard) | ![lang](https://img.shields.io/github/languages/top/yangyang2857-rgb/appfunction-guard) | ![release](https://img.shields.io/github/v/release/yangyang2857-rgb/appfunction-guard) | ![last](https://img.shields.io/github/last-commit/yangyang2857-rgb/appfunction-guard) |
+| [appfunction-guard](https://github.com/yangyang2857-rgb/appfunction-guard) | ![lang](https://img.shields.io/github/languages/top/yangyang2857-rgb/appfunction-guard) | — | ![last](https://img.shields.io/github/last-commit/yangyang2857-rgb/appfunction-guard) |
 | [yangyang2857-rgb.github.io](https://github.com/yangyang2857-rgb/yangyang2857-rgb.github.io) | ![lang](https://img.shields.io/github/languages/top/yangyang2857-rgb/yangyang2857-rgb.github.io) | — | ![last](https://img.shields.io/github/last-commit/yangyang2857-rgb/yangyang2857-rgb.github.io) |
+| [moltdisk](https://github.com/yangyang2857-rgb/moltdisk) | ![lang](https://img.shields.io/github/languages/top/yangyang2857-rgb/moltdisk) | ![release](https://img.shields.io/github/v/release/yangyang2857-rgb/moltdisk) | ![last](https://img.shields.io/github/last-commit/yangyang2857-rgb/moltdisk) |
+| [marvis-persona-spec](https://github.com/yangyang2857-rgb/marvis-persona-spec) | ![lang](https://img.shields.io/github/languages/top/yangyang2857-rgb/marvis-persona-spec) | — | ![last](https://img.shields.io/github/last-commit/yangyang2857-rgb/marvis-persona-spec) |
 
 ### CI status
 
@@ -118,10 +144,13 @@ One person doing product, code, QA and release. I believe *one less abstraction 
 | appfunction-guard | `build.yml` | ![build](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/appfunction-guard/build.yml?branch=main&label=status) |
 | appfunction-guard | `publish-central.yml` | ![publish](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/appfunction-guard/publish-central.yml?branch=main&label=status) |
 | yangyang2857-rgb.github.io | `pages-build-deployment` | ![pages](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/yangyang2857-rgb.github.io/pages/pages-build-deployment?branch=main&label=status) |
+| moltdisk | `ci.yml` | ![ci](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/moltdisk/ci.yml?branch=main&label=status) |
+| marvis-persona-spec | `persona-lint.yml` | ![lint](https://img.shields.io/github/actions/workflow/status/yangyang2857-rgb/marvis-persona-spec/persona-lint.yml?branch=main&label=status) |
 
 ## Contact
 
 - Website: <https://yangyang2857-rgb.github.io/>
+- Studio: [Nightglean Studio](https://github.com/nightglean)
 - Questions or ideas: open an issue in the relevant repo — faster than email
 
 <div align="center">
